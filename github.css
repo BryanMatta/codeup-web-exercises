@@ -1,0 +1,37 @@
+.topNav {
+    display: inline;
+}
+#topLog{
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #24292e;
+    color: #ffffff;
+}
+#userLis{
+    padding: 0;
+}
+.userNav ,li{
+    display: inline;
+}
+.user{
+     float: left;
+ }
+#logo{
+    float: left;
+}
+.first{
+    width: 500px;
+    float: left;
+}
+.bord{
+    table-border-color-dark:1em;
+}
+.second{
+    width: 250px;
+}
+.buffer{
+    float: right;
+}
+#tableH{
+    background-color: aliceblue;
+}
