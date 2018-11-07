@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home Search</title>
+	</head>
+	<body>
+		<form action="https://request-inspector.glitch.me/">
+			<label>
+				Please choose property type
+				<select name="Property_Type" required>
+					<option disabled selected value> -- Select an option --</option>
+					<option value="Condo">Condominiums</option>
+					<option value="Vacation">Vacation Home</option>
+					<option value="Single">Single-Family</option>
+					<option value="Town">Townhouse</option>
+				</select>
+			</label>
+			<br>
+			<label>
+				Please enter Square Footage <input type="number" name="sq_ft" id="sq_ft" placeholder="2,687" required>Ft
+			</label>
+			<br>
+			<label>
+				Please enter price range $<input type="number" name="min_price" id="min_price" placeholder="90,000" required> -
+				$<input type="number" name="max_price" id="max_price" placeholder="200,000" required>
+			</label>
+			<br>
+			<label>
+				Please enter Zipcode <input type="number" name="zipcode" id="zipcode" placeholder="78210" pattern=".{5}">
+			</label>
+			<br>
+			<label>
+				Please enter number of bedrooms <input type="number" name="Num_bed" id="Num_bed" min="1" required>
+			</label>
+			<br>
+			<label>
+				Please enter number of bathrooms <input type="number" name="Num_bath" id="Num_bath" min="1" required>
+			</label>
+			<br>
+			<button type="submit">Search now</button>
+		</form>
+	</body>
+</html>
