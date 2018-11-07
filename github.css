@@ -6,6 +6,7 @@
     margin-bottom: 20px;
     background-color: #24292e;
     color: #ffffff;
+    font-size: 10px;
 }
 #userLis{
     padding: 0;
@@ -23,11 +24,8 @@
     width: 500px;
     float: left;
 }
-.bord{
-    table-border-color-dark:1em;
-}
 .second{
-    width: 250px;
+    width: 100px;
 }
 .buffer{
     float: right;
