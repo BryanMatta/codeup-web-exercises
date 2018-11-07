@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Checkout</title>
+	</head>
+	<body>
+		<form action="https://request-inspector.glitch.me/">
+			<h2>Card Information</h2>
+			<label>
+				<input type="number" name="card_num" id="card_num" placeholder="Card Number"required>
+			</label>
+			<br>
+			<label>
+				<input type="number" name="month" id="month" placeholder="MM" pattern=".{2}" min="01" max="12"required> <input
+					type="number" name="year" id="year" placeholder="YYYY" pattern=".{4}" min="2019"required>
+			</label>
+			<br>
+			<label>
+				<input type="number" name="CVC" id="CVC" placeholder="CVC" pattern=".{3}" required>
+			</label>
+			<h2>Billing Information</h2>
+			<label>
+				Name: <input type="text" name="name" id="name" placeholder="Name" required>
+			</label>
+			<br>
+			<label>
+				Email: <input type="text" name="email" id="email" placeholder="Email"required>
+			</label>
+			<br>
+			<label>
+				Phone: <input type="number" name="phone" id="phone" placeholder="(000)000-0000" pattern=".{11}" required>
+			</label>
+			<br>
+			<label>
+				Address 1: <input type="text" name="address" id="address" placeholder="Address" required>
+			</label>
+			<br>
+			<label>
+				(Optional) Address 2: <input type="text" name="address_cont" id="address_cont" placeholder="Optional">
+			</label>
+			<br>
+			<label>
+				Zipcode: <input type="number" name="zipcode" id="zipcode" placeholder="00000" pattern=".{5}" required>
+			</label>
+			<br>
+			<label>
+				<input type="checkbox" name="record" id="record" value="true"> Keep this credit card for future transactions.
+			</label>
+			<br>
+			<button type="submit">Buy Now!</button>
+		</form>
+	</body>
+</html>
