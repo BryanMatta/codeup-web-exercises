@@ -2,3 +2,35 @@
     color: purple;
     text-decoration: underline;
 }
+h1 {
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #D30C0C;
+    text-decoration: underline;
+    font-family: "Vollkorn";
+}
+body {
+    background-image: url("../img/welcome_background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #BC425F;
+    font-family: "EB Garamond";
+}
+ul {
+    list-style: square;
+}
+a:visited{
+    color: #F00;   
+}
+a:link{
+    color: #00F;
+}
+th{
+    text-align: left;
+    font-size: 1.2em;
+}
+tr, td{
+    padding-right: 10em;
+    font-size: 1.1em;
+}
