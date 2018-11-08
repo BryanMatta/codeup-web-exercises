@@ -12,7 +12,7 @@ body, html {
 
 form {
     /* This form should be separated from other elements by 1em DONE*/
-    border: 1em solid white;
+    margin: 1em;
     /* There must be 1em between the content and the border of this element DONE*/
     padding: 1em;
 }
