@@ -1,0 +1,64 @@
+
+.hidden-on-desktop{
+    margin: 1em 0;
+}
+.hidden-on-desktop > a{
+    text-align: center;
+    padding: .4em;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    background-color: lightblue;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: left;
+}
+.nav-links{
+    padding: 0;
+    list-style-type: none;
+}
+.nav-links li{
+    border: 1px solid gray;
+    text-align: center;
+    background-color: #D50808;
+    margin: 1em;
+    padding: .5em;
+}
+.nav-links a{
+    color: #08D5D5;
+}
+img{
+    max-width: 100%;
+}
+#social-media-links{
+     float: right;
+     margin: 1em;
+}
+#social-media-links li{
+     display: inline-block;
+}
+
+@media screen and (min-width:934px) {
+    .hidden-on-desktop {
+        display: none;
+    }
+
+    .nav-links li {
+        display: inline-block;
+        float: right;
+        border: 0;
+
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 2.5em;
+
+    }
+    img{
+        margin-top: 40px;
+    }
+}
+
