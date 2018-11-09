@@ -63,12 +63,13 @@ a {
 .profile-details{
     float: left;
     width: calc(25% - 1em);
-    margin: 0em .5em;
-
+    margin: 0 .5em;
+    max-width: 225px;
 }
 .profile-items{
     list-style-type: none;
     padding: 0;
+
 }
 .profile-entry{
     margin: .5em;
@@ -76,13 +77,13 @@ a {
 .timeline{
     float: left;
     width: calc(50% - 1em);
-    margin: 0em .5em;
+    margin: 0 .5em;
 
 }
 .who-to-follow{
-    float: right;
+    float: left;
     width: calc(25% - 1em);
-    margin: 0em .5em;
+    margin: 0 .5em;
 
 }
 .container{
