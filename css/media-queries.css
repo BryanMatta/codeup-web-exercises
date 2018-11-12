@@ -1,43 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+.row {
+    width:100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+
+.column.two-fourth{
+    width: 50%;
+}
 
 .hidden-on-desktop{
     margin: 1em 0;
-}
-.hidden-on-desktop > a{
     text-align: center;
-    padding: .4em;
     border-radius: 5px;
     border: 1px solid lightgray;
     background-color: lightblue;
 }
+
+.hidden-on-desktop > a{
+    text-align: center;
+    padding: .4em;
+
+}
+
 h1{
     text-align: center;
 }
+
 h2{
     text-align: left;
 }
+
 .nav-links{
     padding: 0;
     list-style-type: none;
 }
+
 .nav-links li{
     border: 1px solid gray;
+    border-radius: 5px;
     text-align: center;
     background-color: #D50808;
     margin: 1em;
     padding: .5em;
 }
+
 .nav-links a{
     color: #08D5D5;
 }
+
 img{
     max-width: 100%;
+    margin: 0;
 }
+
+#social-media-links li {
+    display: inline-block;
+}
+
+#social-media-links ul{
+    float: right;
+    margin: 0;
+}
+
+#Copyright{
+    margin: 2em 0 0 0;
+}
+
 #social-media-links{
-     float: right;
-     margin: 1em;
+    margin: 2em 0 0 0;
 }
-#social-media-links li{
-     display: inline-block;
+
+#Copyright p{
+    margin: 0;
 }
 
 @media screen and (min-width:934px) {
@@ -49,16 +97,46 @@ img{
         display: inline-block;
         float: right;
         border: 0;
+        margin: 0 2em;
+        padding: 0;
+        background-color: white;
+    }
 
+    .nav-links{
+        margin: 4em 0 0 0;
     }
 
     h1 {
         text-align: left;
         font-size: 2.5em;
-
     }
-    img{
-        margin-top: 40px;
+
+    .column.five-eighth{
+        width: 62.5%;
+    }
+
+    .column.three-eighth{
+        width: 37.5%;
+    }
+
+    .column.one-half{
+        width: 50%;
+    }
+
+    .column.one-third{
+        width: 33.33%;
+    }
+
+    .column.one-fourth{
+        width: 25%;
+    }
+
+    .column.one-sixth{
+        width: 16.66%;
+    }
+
+    .column.one-eighth{
+        width: 12.5%;
     }
 }
 
