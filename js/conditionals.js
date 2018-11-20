@@ -1,5 +1,30 @@
 "use strict";
+function isOdd(numb) {
+    if(numb == 0) {
+        return "Number is zero";
+    }
+    else if(numb % 2 == 0){
+        return "Number is even";
+    }
+    else
+        return "Number is odd";
+}
 
+function add100(numb) {
+    return numb + 100;
+}
+
+function isNegative(numb) {
+    if(numb > 0){
+        return "Number is positive";
+    }
+    else if (numb < 0) {
+        return "Number is negative";
+    }
+    else{
+        return "Number is zero";
+    }
+}
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
@@ -15,6 +40,15 @@
  *
  * Can you refactor your code to use functions?
  */
+function numberConf() {
+    if(confirm("Would you like to enter a number")) {
+        var numb = parseInt(prompt("Please enter a number"));
+        alert(isOdd(numb));
+        alert(add100(numb));
+        alert(isNegative(numb))
+    }
+}
+
 
 /* ########################################################################## */
 
@@ -43,6 +77,39 @@
 //                  will contain a different color everytime the page loads)
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+function analyzeColor() {
+    var col = parseInt(prompt("Please choose a color: \n1: Red \n2: Orange \n3: Yellow \n4: Green \n5: Blue \n6: Indigo \n7: Violet") - 1);
+    switch (colors[col]) {
+        case 0:
+            alert("Strawberries are red.");
+            break;
+
+        case 1:
+            alert("placeholder orange");
+            break;
+
+        case 2:
+            alert("The sun is a yellow dwarf");
+            break;
+
+        case 3:
+            alert("Some grass is green");
+            break;
+
+        case 4:
+            alert("The sky is blue");
+            break;
+
+        case 5:
+            alert("placeholder for indigo");
+            break;
+
+        case 6:
+            alert("placeholder for violet");
+            break;
+    }
+}
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
@@ -82,6 +149,37 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+function price(){
+    var price = parseInt(prompt("Please enter price"));
+    alert(calculateTotal(price));
+}
+function calculateTotal(price) {
+    var discount;
+    var luckyNumber = Math.floor(Math.random() * 6);
+    switch (luckyNumber) {
+        case 0:
+            return "Your lucky number was: " + luckyNumber + ". Your total price (before discount is): $" + price + ". We're sorry but you don't get a discount.";
+
+        case 1:
+            discount = price * .10;
+            return "Your lucky number was: " + luckyNumber + ". Your total price (before discount is): $" + price + ". Your price (after discount) is: $" + price - discount;
+
+        case 2:
+            discount = price * .25;
+            return "Your lucky number was: " + luckyNumber + ". Your total price (before discount is): $" + price + ". Your price (after discount) is: $" + price - discount;
+
+        case 3:
+            discount = price * .35;
+            return "Your lucky number was: " + luckyNumber + ". Your total price (before discount is): $" + price + ". Your price (after discount) is: $" + price - discount;
+
+        case 4:
+            discount = price * .50;
+            return "Your lucky number was: " + luckyNumber + ". Your total price (before discount is): $" + price + ". Your price (after discount) is: $" + price - discount;
+
+        case 5:
+            return "Your lucky number was: " + luckyNumber + ". Congratulations your product is free!!!";
+    }
+}
 
 /**
  * TODO:
@@ -91,4 +189,4 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
