@@ -12,9 +12,11 @@ function showMultiplicationTable() {
 function increaseTriangle() {
     console.clear();
     for (var i = 1; i < 10; i++){
+        var pir = '';
         for (var j = 0; j < i; j++){
-            console.log(i);
+        pir += i;
         }
+        console.log(pir);
     }
 }
 
@@ -35,8 +37,4 @@ function randomOdd() {
             console.log(num + " Is odd");
         }
     }
-}
-
-function f() {
-    
 }

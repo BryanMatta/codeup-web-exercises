@@ -16,10 +16,12 @@ function doWhile() { //Currently breaking page if ran ask Ryan for a possible wo
     do{
         removeCones = Math.floor(Math.random() * 5) + 1;
         if(allCones < removeCones){
-            console.log("Sorry but we can't sell you " + removeCones + " cones we only have " + allCones + ".");
+            console.log(`Sorry but we can't sell you ${removeCones} cones we only have ${allCones}.`);
             continue;
         }
-        console.log("Sold " + removeCones + " cones.");
+
+        console.log(`Sold ${removeCones} + " cones`);
+        allCones -= removeCones;
     } while (allCones > 0)
     console.log("Yay we sold all them all!");
 }
