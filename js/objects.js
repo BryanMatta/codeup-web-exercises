@@ -11,7 +11,7 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    var person = { firstName: 'Bryan', lastName: 'Matta'};
+    var person = {firstName: 'Bryan', lastName: 'Matta'};
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -70,7 +70,20 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-
+    var books = [];
+    function createBook(bookTitle, authorFirst, authorLast) {
+        books.push({title:bookTitle, firstName:authorFirst, lastName:authorLast});
+        console.log(`Adding Book: ${bookTitle} by: ${authorFirst} ${authorLast}`);
+    }
+    function showBookInfo(number) {
+        console.log(`Book # ${number+1} \n Title: ${books[number].title} \n Author: ${books[number].firstName} ${books[number].lastName}`);
+    }
+    createBook('The Mist', 'Stephen', 'King');
+    createBook('Rant', 'Chuck', 'Palahniuk');
+    createBook('Harry Potter', 'J.K', 'Rowling');
+    createBook('Debt of Honor', 'Tom', 'Clancy');
+    createBook('Blood of Elves', 'Andzrej', 'Sapkowski');
+    createBook('The Lord of the Rings', 'J.R.R', 'Tolkien');
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -95,7 +108,9 @@
      *      ---
      *      ...
      */
-
+    for(var i = 0; i <= books.length-1; i++){
+        showBookInfo(i);
+    }
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -106,5 +121,4 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-
 })();
