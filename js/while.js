@@ -1,9 +1,9 @@
 function whileLoop() {
-    console.clear()
+    console.clear();
     var num = 1;
     var i = 0;
     while(i < 16){
-        num *= 2
+        num *= 2;
         console.log(num);
         i++
     }
@@ -22,6 +22,6 @@ function doWhile() { //Currently breaking page if ran ask Ryan for a possible wo
 
         console.log(`Sold ${removeCones} + " cones`);
         allCones -= removeCones;
-    } while (allCones > 0)
+    } while (allCones > 0);
     console.log("Yay we sold all them all!");
 }
