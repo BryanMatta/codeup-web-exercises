@@ -41,7 +41,7 @@
          {name: 'Ryan', amount: 250},
          {name: 'George', amount: 320}
      ];
-     shoppers.applyDiscount = function (client) {
+     shoppers.applyDiscount = function (client) {//after the ternary condition passes true this applies the discount.
              var price = client.amount;
              var discount = price * .12;
              return `Price before discount $${price} the discount is: $${discount} total after discount: $${price - discount}`;
@@ -49,12 +49,16 @@
      shoppers.checkForDiscount = function () {
          shoppers.forEach(function (client) {
              var price = client.amount;
-             if (client.amount >= 200) {
-                 console.log(`Client's name: ${client.name}. ${shoppers.applyDiscount(client)}`);
-             }
-             else {
+             //Finished Exercise this way but made a refactor to utilize a ternary condition.
+             // if (client.amount >= 200) {
+             //     console.log(`Client's name: ${client.name}. ${shoppers.applyDiscount(client)}`);
+             // }
+             // else {
+             //     console.log(`Client's name: ${client.name}. We're sorry but you're not applicable for the discount. Your total is: $${price}`);
+             // }
+             //This makes it easier to read.
+             (client.amount >= 200) ? console.log(`Client's name: ${client.name}. ${shoppers.applyDiscount(client)}`) :
                  console.log(`Client's name: ${client.name}. We're sorry but you're not applicable for the discount. Your total is: $${price}`);
-             }
          });
      };
     shoppers.checkForDiscount();
@@ -76,7 +80,7 @@
         console.log(`Adding Book: ${bookTitle} by: ${authorFirst} ${authorLast}`);
     }
     function showBookInfo(number) {
-        console.log(`Book # ${number+1} \n Title: ${books[number].title} \n Author: ${books[number].firstName} ${books[number].lastName}`);
+        console.log(`Book # ${number+1} \nTitle: ${books[number].title} \nAuthor: ${books[number].firstName} ${books[number].lastName}\n---`);
     }
     createBook('The Mist', 'Stephen', 'King');
     createBook('Rant', 'Chuck', 'Palahniuk');
