@@ -75,19 +75,26 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
     var books = [];
-    function createBook(bookTitle, authorFirst, authorLast) {
-        books.push({title:bookTitle, firstName:authorFirst, lastName:authorLast});
-        console.log(`Adding Book: ${bookTitle} by: ${authorFirst} ${authorLast}`);
+    function createBook(bookTitle, author) {
+        var name = author.split(' ');
+        books.push({
+            title:bookTitle,
+            author:{
+                firstName: name[0],
+                lastName: name[1]
+            }
+        });
+        console.log(`Adding Book: ${bookTitle} by: ${name[0]} ${name[1]}`);
     }
     function showBookInfo(number) {
-        console.log(`Book # ${number+1} \nTitle: ${books[number].title} \nAuthor: ${books[number].firstName} ${books[number].lastName}\n---`);
+        console.log(`Book # ${number+1} \nTitle: ${books[number].title} \nAuthor: ${books[number].author.firstName} ${books[number].author.lastName}\n---`);
     }
-    createBook('The Mist', 'Stephen', 'King');
-    createBook('Rant', 'Chuck', 'Palahniuk');
-    createBook('Harry Potter', 'J.K', 'Rowling');
-    createBook('Debt of Honor', 'Tom', 'Clancy');
-    createBook('Blood of Elves', 'Andzrej', 'Sapkowski');
-    createBook('The Lord of the Rings', 'J.R.R', 'Tolkien');
+    createBook('The Mist', 'Stephen King');
+    createBook('Rant', 'Chuck Palahniuk');
+    createBook('Harry Potter', 'J.K Rowling');
+    createBook('Debt of Honor', 'Tom Clancy');
+    createBook('Blood of Elves', 'Andzrej Sapkowski');
+    createBook('The Lord of the Rings', 'J.R.R Tolkien');
     /**
      * TODO:
      * Loop through the books array and output the following information about
