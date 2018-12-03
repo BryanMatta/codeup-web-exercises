@@ -86,8 +86,8 @@
         });
         console.log(`Adding Book: ${bookTitle} by: ${name[0]} ${name[1]}`);
     }
-    function showBookInfo(number) {
-        console.log(`Book # ${number+1} \nTitle: ${books[number].title} \nAuthor: ${books[number].author.firstName} ${books[number].author.lastName}\n---`);
+    function showBookInfo(book, number) {
+        console.log(`Book # ${number+1} \nTitle: ${book.title} \nAuthor: ${book.author.firstName} ${book.author.lastName}\n---`);
     }
     createBook('The Mist', 'Stephen King');
     createBook('Rant', 'Chuck Palahniuk');
@@ -119,9 +119,9 @@
      *      ---
      *      ...
      */
-    for(var i = 0; i <= books.length-1; i++){
-        showBookInfo(i);
-    }
+    books.forEach(function (book, index) {
+       showBookInfo(book, index);
+    });
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
