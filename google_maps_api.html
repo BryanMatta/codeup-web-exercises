@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="UTF-8">
+		<style type="text/css">
+			#map-canvas {
+				width: 100%;
+				height: 481px;
+			}
+		</style>
 		<title>My Favorite Restaurant</title>
 	</head>
 	<body>
-	
+		<!-- div to hold map -->
+		<div id="map-canvas"></div>
+		<button type="submit" id="btn1">Set Zoom to 5</button>
+		<button type="submit" id="btn2">Set Zoom to 10</button>
+		<button type="submit" id="btn3">Set Zoom to 15</button>
+		
+		<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9b_bCCv9-bVCglCXWZBExPOXKWNegOgc"></script>
+		
+		<!-- Script to show address on map -->
+		<script type="text/javascript">
+            (function() {
+                "use strict";
+	            
+// Set our address to geocode
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 5,
+
+                    // This sets the center of the map at our location
+                    center: {
+                        lat:  29.426791,
+                        lng: -98.489602
+                    }
+                };
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                var geocoder = new google.maps.Geocoder();
+                var laPanaderia = "301 E Houston St, San Antonio, TX 78205";
+                function locate(address){
+                    geocoder.geocode({ "address": address }, function(results, status) {
+
+                        // Check for a successful result
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            // Recenter the map over the address
+                            map.setCenter(results[0].geometry.location);
+                            map.setZoom(20);
+					        var marker = new google.maps.Marker({
+						        position: results[0],
+						        map: map
+					        });
+                        } else {
+
+                            // Show an error message with the status if our request fails
+                            alert("Geocoding was not successful - STATUS: " + status);
+                        }
+                    });
+                }
+               locate(laPanaderia);
+            })();
+		</script>
 	</body>
-</html>
