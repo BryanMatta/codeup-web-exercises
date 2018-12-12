@@ -1,10 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>F.A.Q</title>
-	</head>
-	<body>
-		
-	</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>F.A.Q</title>
+        <style>
+            .invisible{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><img src="img/nationalPark.svg.png" alt="National Park Service Logo" height="100px">National Parks F.A.Q</h1>
+        
+        <dl>
+            <dt class="btn">How many employees are in the National Park Service?</dt>
+            <dd class="invisible">Permanent, temporary, and seasonal employees: More than 20,000. <br>
+                We Also have More than 315,000 volunteers,
+                if you would like to volunteer<br>
+                <a href="https://www.nps.gov/getinvolved/volunteer.htm" target="_blank">Click Here</a></dd>
+            
+            <dt class="btn">How many people visit the national parks?</dt>
+            <dd class="invisible">Total recreation visitors to the national parks in 2017: 330,882,751 <br>
+                <a href="https://www.nps.gov/subjects/socialscience/visitation.htm" target="_blank">See more information about visitation.</a>
+            </dd>
+            
+            <dt class="btn">Where can I find a park map?</dt>
+            <dd class="invisible">You can view maps on <a href="https://www.nps.gov/findapark/index.htm" target="_blank">specific park websites</a> or                                                   <a href="https://www.nps.gov/hfc/cfm/carto.cfm" target="_blank">download maps from the Harpers Ferry Center map collection.</a></dd>
+            
+            <dt class="btn">What are concessions?</dt>
+	        <dd class="invisible">Concessionaires provide park visitors with lodging, transportation, food services, shops, and other services. More than 480 NPS concession contracts in                more than 100 different park units vary in size from small, family-owned businesses to national/international corporations.                                                               <a href="https://www.nps.gov/orgs/csp/index.htm" target="_blank">Learn more about commercial services</a> in the National Park Service.</dd>
+            
+            <dt class="btn">How do I get to Yosemite?</dt>
+	        <dd class="invisible">Keeping in mind that GPS units often provide incorrect driving directions in and around Yosemite, please take a look at our                                            <a href="https://www.nps.gov/yose/planyourvisit/driving.htm" target="_blank">driving directions.</a></dd>
+            
+            <dt class="btn">Do I need a reservation to visit Yosemite? </dt>
+	        <dd class="invisible">No, you don't need a reservation to visit Yosemite. However, if you plan to spend the night in Yosemite, you should have a reservation for                             <a href="https://www.nps.gov/yose/planyourvisit/eatingsleeping.htm" target="_blank">lodging, camping, or backpacking.</a></dd>
+            
+            <dt class="btn">How can I get an educational fee waiver?</dt>
+	        <dd class="invisible"><a href="https://www.nps.gov/yose/planyourvisit/waivers.htm" target="_blank">Fee waivers</a>                                                                            are available to educational groups that meet certain criteria.</dd>
+            
+            <dt class="btn">Will my cell phone work in Yosemite?</dt>
+            <dd class="invisible">AT&T: Voice and 3G (4G HSPA+) data service are available in parts of Yosemite Valley Voice and EDGE data service are available at Tuolumne Meadows.
+	            <br>
+	            Verizon Wireless: Voice and 3G data service are available in parts of Yosemite Valley and El Portal. Voice and 1x data service are available in Tuolumne Meadows, Crane                   Flat, and Wawona.</dd>
+            
+            <dt class="btn">Can I bring my pet to Yosemite?</dt>
+	        <dd class="invisible">Pets are allowed in Yosemite though there are <a href="https://www.nps.gov/yose/planyourvisit/pets.htm" target="_blank">regulations</a>                                                   one must follow.</dd>
+            
+            <dt class="btn">How can I protect myself from bears?</dt>
+            <dd class="invisible">Black bears in Yosemite tend to avoid people and can be scared off. </dd>
+        </dl>
+        <a href="#" id="btn">Show/Hide Answers!</a>
+        <script src="js/jquery-2.2.4.min.js"></script>
+        <script>
+            "use strict";
+            
+            $(document).ready(function () {
+                $('#btn').click(function (event) {
+                    event.preventDefault();
+                    $('dd').toggleClass('invisible');
+                })
+            });
+        </script>
+    </body>
 </html>
