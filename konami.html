@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Konami Code</title>
+	</head>
+	<body>
+		<h1>Konami Code</h1>
+		
+		
+		
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script>
+            "use strict";
+            $(document).ready(function () {
+	            var audio = new Audio("audio/Metal-Gear-Alert-Sound-Effect.mp3");
+	            var secret = '3838404037393739666513';
+	            var code = '';
+	            
+	            $(document).keydown(function(event){
+	                code += event.keyCode;
+	            });
+	            
+	            $(document).keypress(function (e) {
+		            if (e.which == 13){
+		                if(code == secret){
+		                    alert('You just gained 30 Lives!!!');
+		                    code = '';
+	                    }
+	                    else{
+	                        audio.play();
+	                        alert('Try the Code!');
+	                        code = '';
+		                }
+		            }
+	            });
+            });
+            
+		</script>
+	</body>
+</html>

@@ -2,18 +2,44 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>JQuery</title>
+		<title id="title">JQuery</title>
 	</head>
 	<body>
 		
+		<h1 id="welcome">Welcome!</h1>
 		
+		<p id="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eveniet facilis illo in, magnam neque nihil nobis non porro veniam? Cupiditate eos facilis, nemo nostrum nulla quam quis repudiandae unde!</p>
+		
+		<ul id="list">
+			<li class="codeup">This</li>
+			<li class="codeup">Is</li>
+			<li class="codeup">No</li>
+			<li class="codeup">Lorem</li>
+		</ul>
+		
+		<div id="story">
+			<p> <blockquote id="block">John was bored but he made sure that his job was done before he started fooling around.</blockquote></p>
+		</div>
+		<button id="h1">Click Me!!!</button>
 		<script src="js/jquery-2.2.4.min.js"></script>
 		<script>
-			"use strict"
+			"use strict";
 			
-			$(document).ready(function () {
-				alert('DOM has finished loading!')
+			$('#h1').click(function () {
+				$('#welcome').css('background-color', '#ff0');
             });
+			
+			$('p').dblclick(function (e) {
+				$('p, blockquote').css('font-size', '18px');
+            });
+			
+			$('li').hover(
+			    function () {
+				$(this).css('color', '#f00')
+            },
+				function () {
+				$(this).css('color', '#000')
+            })
 		</script>
 	</body>
 </html>
