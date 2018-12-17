@@ -7,11 +7,38 @@
 	</head>
 	<body>
 		<header class="jumbotron bg-info text-center"><h1 class="text-white font-weight-bold">Welcome to the world weather page!</h1></header>
-		<div class="container-luid text-center">
-			<input type="text" id="location" placeholder="Please enter location"><button type="submit" id="submit">Search Location</button>
+		<form class="container text-center">
+				<div class="input-group mb-3">
+				<input type="search" class="form-control" placeholder="Please enter location." id="location" required>
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit" id="submit">Search</button>
+				</div>
+			</div>
+		</form>
+		<div class="container mt-5 weatherbox">
+			<div class="card-group">
+				<div class="card weathercol">template</div>
+				<div class="card weathercol">template</div>
+				<div class="card weathercol">tempplate</div>
+			</div>
 		</div>
 		<script src="js/jquery-2.2.4.min.js"></script>
 		<script src="http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=8493eddadbaaa946313e3bbd6b487d8c"></script>
-		
+		<script>
+			(function () {
+				$(document).ready(function () {
+					$('.weatherbox').hide();
+					$('#submit').click(function (e) {
+					    var loc = $('#location').val();
+					    if(loc)
+					    var search = $.get("api.openweathermap.org/data/2.5/weather?q="+loc+"&APPID=8493eddadbaaa946313e3bbd6b487d8c");
+						e.preventDefault();
+						$('.weathercol').append();
+						$('.weatherbox').slideToggle();
+                        console.log(search);
+                    })
+                })
+            })();
+		</script>
 	</body>
 </html>
